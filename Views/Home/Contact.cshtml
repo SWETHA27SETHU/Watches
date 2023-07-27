@@ -1,0 +1,118 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Contact</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: powderblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+        margin: 100px;
+    }
+
+    input[type=text], input[type=password], input[type=number] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+
+        input[type=text]:focus, input[type=password], input[type=number]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+    hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 35px;
+    }
+
+    button {
+        background-color: #04AA6D;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+        button:hover {
+            opacity: 1;
+        }
+
+    .cancelbtn {
+        padding: 14px 20px;
+        background-color: #f44336;
+    }
+
+    .cancelbtn, .signupbtn {
+        float: left;
+        width: 50%;
+    }
+
+    .container {
+        padding: 16px;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+   
+</style>
+<body>
+    <div>
+        <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+            <h2 class="w3-wide w3-center">Contact</h2>
+            <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
+            <div class="w3-row w3-padding-32">
+               
+                <div class="w3-col m6">
+                    <form action="/action_page.php" target="_blank">
+                        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                            <div class="w3-half">
+                                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                            </div>
+                            <div class="w3-half">
+                                <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                            </div>
+                        </div>
+                        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                        <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+                        <div class="w3-col m6 w3-large w3-margin-bottom">
+                            <i class="fa fa-map-marker" style="width:30px"></i> publisher, US<br>
+                            <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
+                            <i class="fa fa-envelope" style="width:30px"> </i> Email: bookmail@gmail.com<br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer class="w3-container w3-padding-64 >
+                        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                        <i class="fa fa-instagram w3-hover-opacity"></i>
+                        <i class="fa fa-snapchat w3-hover-opacity"></i>
+                        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                        <i class="fa fa-twitter w3-hover-opacity"></i>
+                        <i class="fa fa-linkedin w3-hover-opacity"></i>
+                        <p class="w3-medium">Powered by <a href="https://www.bookworld.com/css/default.asp" target="_blank">Book website.com</a></p>
+                    </footer>
+    </div>
+</body>
+</html>

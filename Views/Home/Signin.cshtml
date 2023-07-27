@@ -1,0 +1,91 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            margin: 100px;
+        }
+
+        .container {
+            background-color: blue;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            height: 100vh;
+            margin-top: 250px;
+        }
+
+            .container h2 {
+                text-align: center;
+            }
+
+            .container input[type="text"],
+            .container input[type="password"],
+            .container input[type="email"], .container input[type="date"], .container input[type="number"] {
+                width: 96%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 2px solid #ccc;
+                border-radius: 3px;
+            }
+
+            .container input[type="submit"] {
+                background-color: #4caf50;
+                color: #fff;
+                border: none;
+                width: 100%;
+                padding: 10px;
+                border-radius: 150px;
+                cursor: pointer;
+            }
+
+                .container input[type="submit"]:hover {
+                    background-color: #45a049;
+                }
+    </style>
+</head>
+<body>
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="Sign up">
+        <h2 class="w3-wide w3-margin-left">Sign up</h2>
+        <p class="w3-opacity w3-margin-left"><i>Please fill in this form to create an account.</i></p>
+        <div class="w3-row w3-padding-32">
+            <div class="w3-col m6">
+                <form action="/action_page.php" target="_blank">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="password" placeholder="password" required name="password">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="number" placeholder="phonenumber" required name="phonenumber">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="password" placeholder="Confirm password" required name="confirm password">
+                        </div>
+                    </div>
+                    <p class="w3-opacity w3-margin-left"><i>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a></i></p>
+
+                    <button class="w3-button w3-black w3-section w3-right" type="submit">Cancel</button>
+                    <button class="w3-button w3-black w3-section w3-right" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

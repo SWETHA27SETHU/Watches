@@ -1,0 +1,166 @@
+﻿
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            margin: 100px;
+        }
+
+        .container {
+            background-color: blue;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            height: 100vh;
+            margin-top: 250px;
+        }
+
+            .container h2 {
+                text-align: center;
+            }
+
+            .container input[type="text"],
+            .container input[type="password"],
+            .container input[type="email"], .container input[type="date"], .container input[type="number"] {
+                width: 96%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 2px solid #ccc;
+                border-radius: 3px;
+            }
+
+            .container input[type="submit"] {
+                background-color: #4caf50;
+                color: #fff;
+                border: none;
+                width: 100%;
+                padding: 10px;
+                border-radius: 150px;
+                cursor: pointer;
+            }
+
+                .container input[type="submit"]:hover {
+                    background-color: #45a049;
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form action="/register" method="post">
+            <div>
+                <label> First name</label>
+                <input type="text" name="First name" id="Firstname" placeholder="First name" onfocus=validateLoginForm>
+            </div>
+            <div>
+                <label> Last name</label>
+                <input type="text" name="Last name" id="Lastname" placeholder="Last name" required>
+            </div>
+            <label> Date of birth</label>
+            <input type="date" name="Date of birth" placeholder="First name" required>
+            <label> Gender</label>
+            <input type="radio" name="gender" id="male">
+            <label for="male"> Male</label>
+
+            <input type="radio" name="gender" id="female">
+            <label for="female"> Female</label><br><br>
+            <label> Phonenumber</label>
+            <input type="number" name="phonenumber" id="Phonenumber" placeholder="phone number" required>
+            <label> E-mail</label>
+            <input type="email" name="email" id=" Email" placeholder="Email" required>
+            <label> Password</label>
+            <input type="password" name="password" id="Password" placeholder="Password" required>
+            <label>Confirm password</label>
+            <input type="password" name="confirmPassword" id="Confirmpassword" placeholder="Confirm Password" required>
+            <input type="submit" value="Register" onclick="validateLoginForm()"></button>
+            <div id="errorMessages"></div>
+
+    </div>
+    <script>
+        function validateLoginForm() {
+
+            const FirstnameInput = document.getElementById('Firstname');
+            const LastnameInput = document.getElementById('Lastname');
+            const PhonenumberInput = document.getElementById('Phonenumber');
+            const EmailInput = document.getElementById('E-mail');
+            const passwordInput = document.getElementById('password');
+            const ConfirmpasswordInput = document.getElementById('Confirmpassword');
+            const errorMessages = document.getElementById('errorMessages');
+
+
+            errorMessages.innerHTML = '';
+
+            // Validate username and password
+            const Firstname = FirstnameInput.value.trim();
+            const Lastname = LastnameInput.value.trim();
+            const Email = EmailInput.value.trim();
+            const Confirmpassword = ConfirmpasswordInput.value.trim();
+            const Phonenumber = PhonenumberInput.value.trim();
+            const password = passwordInput.value;
+
+            if (Firstname === '') {
+                displayError('Firstname is required.');
+                return;
+            }
+            if (F Lastname === '') {
+                displayError(' Lastname is required.');
+                return;
+            }
+            if (Email === '') {
+                displayError('Email is required.');
+                return;
+            }
+            if (Phonenumber === '') {
+                displayError('Phonenumber is required.');
+                return;
+            }
+
+
+            if (password === '') {
+                displayError('Password is required.');
+                return;
+            }
+            if (Confirmpassword === '') {
+                displayError('Confirmpassword is required.');
+                return;
+            }
+
+            displaySuccess('Login successful!');
+        }
+
+        function displayError(errorMessage) {
+            const errorMessages = document.getElementById('errorMessages');
+            const errorElement = document.createElement('p');
+            errorElement.style.color = 'red';
+            errorElement.textContent = errorMessage;
+            errorMessages.appendChild(errorElement);
+        }
+
+        function displaySuccess(successMessage) {
+            const errorMessages = document.getElementById('errorMessages');
+            const successElement = document.createElement('p');
+            successElement.style.color = 'green';
+            successElement.textContent = successMessage;
+            errorMessages.appendChild(successElement);
+        }
+    </script>
+    </form>
+</body>
+</html>

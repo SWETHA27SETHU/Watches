@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Car Webpage</title>
+    <link rel="stylesheet" href="Styles.css">
+    <style>
+        .mySlides {
+            display: center;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+        }
+    </style>
+   </head>
+    <body>
+        <div class="w3-content" style="max-width:2000px;margin-top:80px">
+            <div class="mySlides w3-display-container w3-center">
+                <img src="https://media.istockphoto.com/id/173776882/vector/old-fashioned-open-fairytale-storybook-with-text-design.jpg?s=1024x1024&amp;w=is&amp;k=20&amp;c=uz2YWSQjr-EZxIZTWqh-ZN16ghq5QlH4xKtXBGa8ee0=" alt="Book image" width="500" height="300">
+            </div>
+            <div class="mySlides w3-display-container w3-center">
+                <img src="https://media.istockphoto.com/id/517778587/photo/old-books-on-wooden-table.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=i0NIIzs1nWilgaao9wLa09AnYvqHDkwj4yIfbY7_lJ0=" alt="book image" width="500" height="300">
+
+            </div>
+            <div class="mySlides w3-display-container w3-center">
+                <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781481429368/this-is-a-good-story-9781481429368_hr.jpg" alt="Great Story" width="500" height="300">
+            </div>
+        </div>
+
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="THE STORY WORLD">
+            <h2 class="w3-wide">THE STORY BOOKS</h2>
+            <p class="w3-opacity"><i>Love to read books</i></p>
+            <p class="w3-justify">
+                Literary critics, historians, avid readers, and even casual readers will all have different opinions on which novel is truly the “greatest book ever written.” Is it a novel with beautiful, captivating figurative language? Or one with gritty realism? A novel that has had an immense social impact? Or one that has more subtly affected the world? Here is a list of 12 novels that, for various reasons, have been considered some of the greatest works of literature ever written.
+            </p>
+            <div class="w3-row w3-padding-32">
+                <div class="w3-third">
+                    <p>The Great Book</p>
+                    <img src="https://cdn.pixabay.com/photo/2015/11/19/21/10/glasses-1052010_640.jpg" alt="Related books" class="w3-round w3-margin-bottom" width="200" height="500">
+                </div>
+                <div class="w3-third">
+                    <p>FairyTales</p>
+                    <img src="https://c8.alamy.com/comp/2CFGC7T/beauty-and-the-beast-front-cover-of-a-childrens-book-by-jeanne-marie-leprince-de-beaumont-published-in-18756-2CFGC7T.jpg" alt="Book image" class="w3-round w3-margin-bottom" width="200" height="500">
+                </div>
+                <div class="w3-third">
+                    <p>The Sleeping Beauty</p>
+                    <img src="https://m.media-amazon.com/images/I/61zpVG42eAL.jpg" alt="SLEEPING BEAUTY BOOK" class="w3-round" width="200" height="500">
+                </div>
+            </div>
+        </div>
+        <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) { myIndex = 1 }
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 4000);
+            }
+            </script>
+    </body>
+</html>
